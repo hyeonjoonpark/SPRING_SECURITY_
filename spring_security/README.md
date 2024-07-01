@@ -1,0 +1,1 @@
+![스프링 시큐리티를 통한 엔드포인트 접근](..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2F1z%2Fzmqg13ts1rv6xl4d9gw07wx80000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_Vsq5AP%2F%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202024-07-02%20%EC%98%A4%EC%A0%84%2012.19.32.png)
