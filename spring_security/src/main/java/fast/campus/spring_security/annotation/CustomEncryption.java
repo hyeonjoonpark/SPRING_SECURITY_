@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Target(ElementType.FIELD) // 필드에 부여할 커스텀 어노테이션
-@Retention(RetentionPolicy.RUNTIME) // 런타임 시점에 동작
+@Retention(RetentionPolicy.RUNTIME) // 런타임 시점에 동작한다는 뜻
 public @interface CustomEncryption {
 
 }
