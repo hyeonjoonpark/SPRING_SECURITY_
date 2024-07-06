@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
-    @GetMapping("/api/v1/hello") // REST 엔드포인트 생성
+    @GetMapping("/v1/hello") // REST 엔드포인트 생성
     public String hello() {
         return "Hello Spring Security";
     }

@@ -1,5 +1,6 @@
-package fast.campus.spring_security.user;
+package fast.campus.spring_security.user.details;
 
+import fast.campus.spring_security.user.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
