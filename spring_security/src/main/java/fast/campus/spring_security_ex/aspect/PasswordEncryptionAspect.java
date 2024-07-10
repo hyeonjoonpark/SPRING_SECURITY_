@@ -1,7 +1,7 @@
-package fast.campus.spring_security.aspect;
+package fast.campus.spring_security_ex.aspect;
 
-import fast.campus.spring_security.annotation.CustomEncryption;
-import fast.campus.spring_security.service.EncryptService;
+import fast.campus.spring_security_ex.annotation.CustomEncryption;
+import fast.campus.spring_security_ex.service.EncryptService;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.reflect.FieldUtils;
@@ -19,7 +19,7 @@ import java.util.Arrays;
 public class PasswordEncryptionAspect {
     private final EncryptService encryptService;
 
-    @Around("execution(* fast.campus.spring_security.controller..*.*(..))")
+    @Around("execution(* fast.campus.spring_security_ex.controller..*.*(..))")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
         Arrays.stream(joinPoint.getArgs())
                 .forEach(this::fieldEncryption);

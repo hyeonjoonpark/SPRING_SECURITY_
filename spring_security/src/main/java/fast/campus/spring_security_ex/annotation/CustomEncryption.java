@@ -1,4 +1,4 @@
-package fast.campus.spring_security.annotation;
+package fast.campus.spring_security_ex.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

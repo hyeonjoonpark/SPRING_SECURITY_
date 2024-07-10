@@ -1,4 +1,4 @@
-package fast.campus.spring_security.config;
+package fast.campus.spring_security_ex.config;
 import com.p6spy.engine.common.ConnectionInformation;
 import com.p6spy.engine.event.JdbcEventListener;
 import com.p6spy.engine.spy.P6SpyOptions;

@@ -1,4 +1,4 @@
-package fast.campus.spring_security;
+package fast.campus.spring_security_ex;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

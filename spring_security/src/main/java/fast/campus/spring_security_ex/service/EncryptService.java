@@ -1,4 +1,4 @@
-package fast.campus.spring_security.service;
+package fast.campus.spring_security_ex.service;
 
 import org.springframework.stereotype.Service;
 

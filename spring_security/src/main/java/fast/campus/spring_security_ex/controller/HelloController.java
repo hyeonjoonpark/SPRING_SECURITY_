@@ -1,4 +1,4 @@
-package fast.campus.spring_security.controller;
+package fast.campus.spring_security_ex.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

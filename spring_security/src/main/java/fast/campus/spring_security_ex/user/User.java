@@ -1,4 +1,4 @@
-package fast.campus.spring_security.user;
+package fast.campus.spring_security_ex.user;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

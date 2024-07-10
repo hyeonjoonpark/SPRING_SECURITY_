@@ -1,4 +1,4 @@
-package fast.campus.spring_security.provider;
+package fast.campus.spring_security_ex.provider;
 
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
