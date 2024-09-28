@@ -1,5 +1,6 @@
 package fast.campus.spring_security_ex.config;
 
+import fast.campus.spring_security_ex.filter.RequestValidationFilter;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
@@ -18,6 +19,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.access.intercept.RequestAuthorizationContext;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
 import java.util.Collection;
 import java.util.function.Supplier;
@@ -60,6 +62,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                .addFilterBefore(new RequestValidationFilter(), BasicAuthenticationFilter.class)
                 .httpBasic(Customizer.withDefaults())
                 .authorizeHttpRequests(
                         r -> {
