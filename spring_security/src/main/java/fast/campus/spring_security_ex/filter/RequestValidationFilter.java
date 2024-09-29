@@ -3,11 +3,9 @@ package fast.campus.spring_security_ex.filter;
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
-@Component
 public class RequestValidationFilter implements Filter {
 
     @Override
