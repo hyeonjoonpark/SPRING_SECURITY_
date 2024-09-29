@@ -23,6 +23,9 @@ spring:
   main:
     allow-bean-definition-overriding: true
 
+authentication:
+  key: thisisme
+
 server:
   servlet:
     context-path: /api
