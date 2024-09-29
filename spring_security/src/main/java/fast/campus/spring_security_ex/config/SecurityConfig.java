@@ -1,8 +1,10 @@
 package fast.campus.spring_security_ex.config;
 
 import fast.campus.spring_security_ex.filter.RequestValidationFilter;
-import org.springframework.beans.factory.annotation.Configurable;
+import fast.campus.spring_security_ex.filter.StaticKeyAuthenticationFilter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authorization.AuthorizationDecision;
 import org.springframework.security.authorization.AuthorizationManager;
@@ -24,8 +26,10 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
 import java.util.Collection;
 import java.util.function.Supplier;
 
-@Configurable
+@Configuration
+@RequiredArgsConstructor
 public class SecurityConfig {
+    private final StaticKeyAuthenticationFilter staticKeyAuthenticationFilter;
     @Bean
     public UserDetailsService userDetailsService() {
         InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
@@ -63,6 +67,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .addFilterBefore(new RequestValidationFilter(), BasicAuthenticationFilter.class)
+                .addFilterAt(staticKeyAuthenticationFilter, BasicAuthenticationFilter.class)
                 .httpBasic(Customizer.withDefaults())
                 .authorizeHttpRequests(
                         r -> {
